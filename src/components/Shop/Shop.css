@@ -2,10 +2,26 @@
     display: grid;
     grid-template-columns: 4fr 1fr;
 }
+/*============================================= Products Section =============================================*/
+.product-container{
+    width: 88%;
+    margin: auto;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap:45px;
+}
 
+
+/*=============================================== Cart Section ===============================================*/
 .cart-summery{
     background: rgba(255, 153, 0, 0.3);
     padding: 0 25px;
+}
+.cart-summery-main{
+    position: sticky;
+    top: 50px;
 }
 .cart-summery h5{
     font-size: 25px;
@@ -48,4 +64,15 @@
 }
 .review-order-btn:hover{
     background-color: #814f03;
+}
+
+/* Media Query Section */
+@media all and (max-width: 1350px){
+    .product-container{
+        width: 95%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        gap:30px;
+    }
 }
