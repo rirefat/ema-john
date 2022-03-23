@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Product from '../Product/Product';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTrashCan } from '@fortawesome/free-solid-svg-icons'
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { faTrashCan, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import './Shop.css'
+import Cart from '../Cart/Cart';
 
 
 const Shop = () => {
@@ -19,6 +19,7 @@ const Shop = () => {
     const addToCart = (product) => {
         const newCart = [...cart, product];
         setCart(newCart);
+        console.log(cart);
     };
 
     return (
@@ -28,7 +29,12 @@ const Shop = () => {
                     products.map(product => <Product key={product.id} product={product} addToCart={addToCart}></Product>)
                 }
             </div>
-            <div className="cart-summery">
+            <div className="cart-container">
+                <div className="main">
+                    <Cart cart={cart}></Cart>
+                </div>
+            </div>
+            {/* <div className="cart-summery">
                 <div className="cart-summery-main">
                     <h5>Order Summery</h5>
                     <div className="order-summery">
@@ -43,7 +49,7 @@ const Shop = () => {
                         <button className='review-order-btn'>Review Order <FontAwesomeIcon icon={faArrowRight} /></button>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 };
