@@ -1,0 +1,26 @@
+/*============================================= Navbar Styles =============================================*/
+nav{
+    background-color: #1C2B35;  
+}
+.nav-menu{        
+    height: 80px;  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+    margin: auto;
+}
+.main-menu a{
+    text-decoration: none;
+    color:white;
+    margin-right:36px ;
+}
+
+/*========================================= Mouse Hovering Effects =========================================*/
+.nav-icon img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.main-menu a:hover{
+    color: #FF9900;
+}
