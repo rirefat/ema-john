@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Product from '../Product/Product';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTrashCan, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import './Shop.css'
 import Cart from '../Cart/Cart';
 
@@ -19,7 +17,7 @@ const Shop = () => {
     const addToCart = (product) => {
         const newCart = [...cart, product];
         setCart(newCart);
-        console.log(cart);
+        // console.log(cart);
     };
 
     return (
